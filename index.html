@@ -23,6 +23,8 @@ body {
     background-color: rgba(0,0,0,1.00);
 }
 #chatTrovo {
+    margin: 0px;
+    padding: 0px;
     height: 900px;
     width: 500px;
     background-color: rgba(0,0,0,1.00);
@@ -40,12 +42,12 @@ body {
         <script type="text/javascript">
             
             const availableScreenWidth = window.innerWidth;
-            const availableScreenHeight = window.innerHeight;
+            const availableScreenHeight = window.innerHeight - 2;
             
-            var widthjs = window.screen.availWidth - 500;
+            var widthjs = availableScreenWidth - 500;
 
                 var embed = new Twitch.Embed("twitch-embed", {
-                width: widthjs - 22,
+                width: widthjs,
                 height: availableScreenHeight,
                 channel: "shnumi",
                 layout: "video-with-chat",
@@ -63,8 +65,6 @@ body {
             document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
             
             document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
-            
-            
             
         </script>
       </body>
