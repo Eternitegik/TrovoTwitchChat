@@ -5,8 +5,24 @@
 <title>Untitled Document</title>
 <style type="text/css">
 body {
-    height: 800px;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
+}
+#player {
+    height: 900px;
+    width: 900px;
+    background-color: rgba(90,51,51,1.00);
+}
+#chatTwitc {
+    height: 900px;
+    width: 500px;
+    background-color: rgba(90,51,51,1.00);
+}
+#chatTrovo {
+    height: 900px;
+    width: 500px;
+    background-color: rgba(90,51,51,1.00);
 }
 </style>
 </head>
@@ -15,11 +31,9 @@ body {
 <table border="0" cellspacing="0" cellpadding="0">
   <tbody>
     <tr>
-      <td><iframe src="https://player.twitch.tv/?channel=shnumi&parent=eternitegik.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe></td>
-      <td>
-          <!--<iframe src="https://www.twitch.tv/popout/shnumi/chat?popout=&parent=eternitegik.github.io"></iframe>-->
-        <iframe src="http://twitch.tv/chat/embed?channel=shnumi&popout_chat=true"></iframe></td>
-      <td><iframe src="https://trovo.live/chat/Shnumi?"></iframe></td>
+      <td><iframe  id="player" src="https://player.twitch.tv/?channel=shnumi&parent=eternitegik.github.io" frameborder="0" allowfullscreen="true" scrolling="no"></iframe></td>
+      <td><iframe id="chatTwitc" frameborder="0" src="https://www.twitch.tv/embed/shnumi/chat?parent=eternitegik.github.io"></iframe></td>
+      <td><iframe id="chatTrovo" frameborder="0" src="https://trovo.live/chat/Shnumi?"></iframe></td>
     </tr>
   </tbody>
 </table>
