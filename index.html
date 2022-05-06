@@ -43,7 +43,6 @@ body {
             const availableScreenHeight = window.screen.availHeight
             
             var widthjs = window.screen.availWidth - 500
-            document.getElementById("Twitc").style.width = widthjs;
 
           var embed = new Twitch.Embed("twitch-embed", {
             width: 1400,
@@ -57,7 +56,9 @@ body {
           embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
             var player = embed.getPlayer();
             player.play();
-          });
+          });            
+            
+            document.getElementById("Twitc").style.width = widthjs;
         </script>
       </body>
 </html>
