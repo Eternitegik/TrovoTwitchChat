@@ -38,9 +38,15 @@ body {
             </table>
         <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <script type="text/javascript">
+            
+            const availableScreenWidth = window.screen.availWidth
+            const availableScreenHeight = window.screen.availHeight
+            
+            var widthjs = window.screen.availWidth - 500
+
           var embed = new Twitch.Embed("twitch-embed", {
-            width: 1400,
-            height: "100%",
+            width: widthjs,
+            height: 900,
             channel: "shnumi",
             layout: "video-with-chat",
             autoplay: true,
