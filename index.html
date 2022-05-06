@@ -11,8 +11,6 @@ body {
     background-color: rgba(0,0,0,1.00);
 }
 #twitch-embed {
-    height: 900px;
-    width: 900px;
     margin: 0px;
     padding: 0px;
     background-color: rgba(0,0,0,1.00);
@@ -46,20 +44,20 @@ body {
             
             var widthjs = window.screen.availWidth - 500;
 
-          var embed = new Twitch.Embed("twitch-embed", {
-            width: widthjs - 10,
-            height: availableScreenHeight,
-            channel: "shnumi",
-            layout: "video-with-chat",
-            autoplay: true,
-            parent: ["eternitegik.github.io"],
-              id: "pl"
-          });
+                var embed = new Twitch.Embed("twitch-embed", {
+                width: widthjs - 22,
+                height: availableScreenHeight,
+                channel: "shnumi",
+                layout: "video-with-chat",
+                autoplay: true,
+                parent: ["eternitegik.github.io"],
+                id: "pl"
+              });
 
-          embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-            var player = embed.getPlayer();
-            player.play();
-          });            
+              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+                var player = embed.getPlayer();
+                player.play();
+              });            
             
             document.getElementById("Twitc").style.width = widthjs + 'px';
             document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
