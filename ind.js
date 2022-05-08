@@ -4,7 +4,10 @@ window.onload = function(){
     var urlSearch = document.location.search;
     var urlPathname = document.location.pathname;
     
+    console.log('----------------------1');
+    
     if(urlSearch !== ''){
+        console.log('----------------------2');
         urlSearch = urlSearch.substring(1);
         urlSearch = urlSearch.split("&");
         var urlSearchA = urlSearch[0];
@@ -39,6 +42,6 @@ window.onload = function(){
        }
     else{
         window.open(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
-        console.log('123');
+        console.log('----------------------3');
     }
 }
