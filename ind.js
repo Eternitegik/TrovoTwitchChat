@@ -1,0 +1,26 @@
+window.onload = function(){
+    const availableScreenWidth = window.innerWidth;
+    const availableScreenHeight = window.innerHeight - 4;
+
+    var widthjs = availableScreenWidth - 350;
+
+    var embed = new Twitch.Embed("twitch-embed", {
+        width: widthjs,
+        height: availableScreenHeight,
+        channel: "shnumi",
+        layout: "video-with-chat",
+        autoplay: true,
+        parent: ["eternitegik.github.io"],
+        id: "pl"
+    });
+
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+    });            
+
+    document.getElementById("Twitc").style.width = widthjs + 'px';
+    document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
+
+    document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
+}

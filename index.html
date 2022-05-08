@@ -34,38 +34,41 @@ body {
       <body>
           <table border="0" cellspacing="0" cellpadding="0">
               <tbody><tr><td id="Twitc"><div id="twitch-embed"></div></td>
-                  <td><iframe id="chatTrovo" frameborder="0" src="https://trovo.live/chat/Shnumi?"></iframe></td>
+                  <td><iframe id="chatTrovo" frameborder="0" src="https://trovo.live/chat/Shnumi?"></iframe>
+                  </td>
                 </tr>
               </tbody>
             </table>
-        <script src="https://embed.twitch.tv/embed/v1.js"></script>
-        <script type="text/javascript">
-            
-            const availableScreenWidth = window.innerWidth;
-            const availableScreenHeight = window.innerHeight - 4;
-            
-            var widthjs = availableScreenWidth - 350;
+          
+<script type="text/javascript" src="ind.js"></script>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<!--<script type="text/javascript">
 
-                var embed = new Twitch.Embed("twitch-embed", {
-                width: widthjs,
-                height: availableScreenHeight,
-                channel: "shnumi",
-                layout: "video-with-chat",
-                autoplay: true,
-                parent: ["eternitegik.github.io"],
-                id: "pl"
-              });
+const availableScreenWidth = window.innerWidth;
+const availableScreenHeight = window.innerHeight - 4;
 
-              embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-                var player = embed.getPlayer();
-                player.play();
-              });            
-            
-            document.getElementById("Twitc").style.width = widthjs + 'px';
-            document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
-            
-            document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
-            
-        </script>
+var widthjs = availableScreenWidth - 350;
+
+var embed = new Twitch.Embed("twitch-embed", {
+width: widthjs,
+height: availableScreenHeight,
+channel: "shnumi",
+layout: "video-with-chat",
+autoplay: true,
+parent: ["eternitegik.github.io"],
+id: "pl"
+});
+
+embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+var player = embed.getPlayer();
+player.play();
+});            
+
+document.getElementById("Twitc").style.width = widthjs + 'px';
+document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
+
+document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
+
+</script>-->
       </body>
 </html>
