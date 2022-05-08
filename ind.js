@@ -1,26 +1,42 @@
 window.onload = function(){
-    const availableScreenWidth = window.innerWidth;
-    const availableScreenHeight = window.innerHeight - 4;
+    var urlProtocol = document.location.protocol;
+    var urlHost = document.location.host
+    var urlSearch = document.location.search;
+    
+    if(urlSearch !== ''){
+        urlSearch = urlSearch.substring(1);
+        urlSearch = urlSearch.split("&");
+        var urlSearchA = urlSearch[0];
+        urlSearchA = urlSearchA.split("=")[1];
+        var urlSearchB = urlSearch[1];
+        urlSearchB = urlSearchB.split("=")[1];
 
-    var widthjs = availableScreenWidth - 350;
+        var availableScreenWidth = window.innerWidth;
+        var availableScreenHeight = window.innerHeight - 4;
 
-    var embed = new Twitch.Embed("twitch-embed", {
-        width: widthjs,
-        height: availableScreenHeight,
-        channel: "shnumi",
-        layout: "video-with-chat",
-        autoplay: true,
-        parent: ["eternitegik.github.io"],
-        id: "pl"
-    });
+        var widthjs = availableScreenWidth - 350;
 
-    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-        var player = embed.getPlayer();
-        player.play();
-    });            
+        var embed = new Twitch.Embed("twitch-embed", {
+            width: widthjs,
+            height: availableScreenHeight,
+            channel: "shnumi",
+            layout: "video-with-chat",
+            autoplay: true,
+            parent: ["eternitegik.github.io"],
+            id: "pl"
+        });
 
-    document.getElementById("Twitc").style.width = widthjs + 'px';
-    document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
+        embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+            var player = embed.getPlayer();
+            player.play();
+        });            
 
-    document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
+        document.getElementById("Twitc").style.width = widthjs + 'px';
+        document.getElementById("Twitc").style.height = availableScreenHeight + 'px';
+
+        document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
+       }
+    else{
+        window.open(urlProtocol + urlHost + "?Trovo=&Tritch=");
+    }
 }
