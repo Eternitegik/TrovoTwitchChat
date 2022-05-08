@@ -56,7 +56,7 @@ window.onload = function(){
             document.getElementById("stream").style.display = 'inherit';
         }
         else{
-            document.querySelector('#mess').innerHTML = 'Заполните в URL параметры Trovo= и Twitch= именем стримера с соответствующих площядок и перейдите по ссылке'
+            document.querySelector('#mess').innerHTML = 'Заполните в URL параметры Trovo= и Twitch= именем стримера с соответствующих площадок и перейдите по ссылке'
         }
        }
     else{
