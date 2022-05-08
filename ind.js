@@ -47,7 +47,7 @@ window.onload = function(){
        }
     else{
         //window.open(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
-        console.log(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
+        console.log(urlProtocol+ '//' + urlHost + urlPathname + "?Trovo=&Tritch=");
         console.log('----------------------3');
     }
 }
