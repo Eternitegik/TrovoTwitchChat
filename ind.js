@@ -41,7 +41,8 @@ window.onload = function(){
         document.getElementById("chatTrovo").style.height = availableScreenHeight + 'px';
        }
     else{
-        window.open(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
+        //window.open(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
+        console.log(urlProtocol + urlHost + urlPathname + "?Trovo=&Tritch=");
         console.log('----------------------3');
     }
 }
