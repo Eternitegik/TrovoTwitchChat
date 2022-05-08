@@ -4,6 +4,11 @@ window.onload = function(){
     var urlSearch = document.location.search;
     var urlPathname = document.location.pathname;
     
+    console.log("urlProtocol:" + urlProtocol);
+    console.log("urlHost:" + urlHost);
+    console.log("urlSearch:" + urlSearch);
+    console.log("urlPathname:" + urlPathname);
+    
     console.log('----------------------1');
     
     if(urlSearch !== ''){
